@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiments</title>
+    <style>
+        callout-box {
+            display: block;
+            border: 2px solid #007bff;
+            border-left-width: 10px;
+            padding: 10px;
+            background-color: #e7f3ff;
+            margin: 20px 0;
+        }
+
+        callout-box h3 {
+            margin-top: 0;
+            font-size: 18px;
+            color: #007bff;
+        }
+
+        callout-box p {
+            margin: 0;
+            color: #333;
+        }
+    </style>
+<!-- Please don't break anything! -->
+</head>
+<body>
+    <!--#include virtual="navbar.html" -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">About Me</a></li>
+                <!-- <ul>
+                    <li><a href="#hi">Hi</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#FAQ">FAQ</a></li>
+                </ul> -->
+                <li><a href="technical.html">Skills + Experiences + Projects</a></li>
+                <!-- <ul>
+                    <li>Skills</li>
+                    <li>Experiences</li>
+                    <li>Projects</li>
+                </ul> -->
+                <li><a href="resumecontact.html">Contact Me + Resume</a></li>
+                <li><a href="experiments.html">Experimentation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <hgroup>
+            <h1>Experimenting with HTML tags</h1>
+            <p>Trying out different HTML tags to see how they work.</p>
+        </hgroup>
+
+        <div>
+            <hello-world></hello-world>
+            <script>
+                class HelloWorld extends HTMLElement{
+                    connectedCallback() {
+                        console.log("Hello World!");
+                    }
+                }
+                customElements.define("hello-world", HelloWorld);
+            </script>
+        </div>
+        <hr>
+        <div>
+            <dialog open>
+                <p>Welcome to the experimental part of my website! <br> You'll find tags that I'm experimenting with here.</p>
+                <form method="dialog">
+                  <button>I'm excited to look around!</button>
+                </form>
+              </dialog>  
+            </div>
+    
+        <section>
+            <header>
+                <h2>Using the "pre" tag </h2>
+            </header>
+            <p>
+                The <dfn>pre</dfn> tag is used to define preformatted text. 
+            </p>
+            <p>
+                A Porsche 911 is one of the best cars ever made.
+            </p>
+            <pre>
+                ____----------- _____
+                \~~~~~~~~~~/~_--~~~------~~~~~     \
+                 `---`\  _-~      |                   \
+                   _-~  &lt;_         |                     \[]
+                 / ___     ~~--[""] |      ________-------'_
+                > /~` \    |-.   `\~~.~~~~~                _ ~ - _
+                 ~|  ||\%  |       |    ~  ._                ~ _   ~ ._
+                   `_//|_%  \      |          ~  .              ~-_   /\
+                          `--__     |    _-____  /\               ~-_ \/.
+                               ~--_ /  ,/ -~-_ \ \/          _______---~/
+                                   ~~-/._&lt;   \ \`~~~~~~~~~~~~~     ##--~/
+                                         \    ) |`------##---~~~~-~  ) )
+                                          ~-_/_/                  ~~ ~~
+            </pre>
+        </section>
+        <hr>
+        <section>
+            <header>
+                <h2>Using the "video" tag</h2>
+            </header>
+            <p>The <dfn>video tag</dfn> can be used to embed videos</p>
+    
+            <video controls width="250" height="200" muted>
+                <source src="/assets/flower.webm" type="video/webm">
+            </video>
+        </section>
+        <hr>
+        <section>
+            <header>
+                <h2>Using the "audio" tag</h2>
+            </header>
+            <p>
+                This what a T-Rex sounded like. Its a lot different than it does in Jurassic Park!
+            </p>
+            <audio controls src="/assets/t-rex-roar.mp3"></audio>
+        </section>
+        <hr>
+        <section>
+            <header>
+                <h2>Using the "table" and related tags</h2>
+            </header>
+            <p>The <dfn>table</dfn> tag is used to create tables in HTML</p>
+            <p>Here is a table about some popular cars.</p>
+
+            <p>
+                These are some of the best cars ever made because of how reliable they are.
+                
+            </p>
+            <aside>
+                The Toyota Corolla is popular because of its engine reliability. It uses a <i>2.0 Liter 4-cylinder natuarally aspirated engine</i>. 
+            </aside>
+            <p>
+                Additionally, a lot of people use these cars, adding to their popularity.
+            </p>
+            <aside>
+                <p>Upwards of 232,000 Toyota Corollas were sold in the United States in 2024.</p>
+            </aside>
+            <p>
+                Some information about these popular cars is provided in the table below, 
+                with one of them being the Subaru <abbr title="World Rally eXperimental">WRX</abbr> (World Rally eXperimental).
+            </p>
+    
+            <table>
+                <caption>Info about some cool cars</caption>
+                <colgroup>
+                    <col span="4" class="car"> <!-- This applies the car class to the first two columns (Brand and Model) -->
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Porsche</td>
+                        <td>911</td>
+                        <td>Fast, good handling</td>
+                        <td>Expensive</td>
+                    </tr>
+                    <tr>
+                        <td>Toyota</td>
+                        <td>Corolla</td>
+                        <td>Reliable, good gas mileage</td>
+                        <td>Not very fast</td>
+                    </tr>
+                    <tr>
+                        <td>BMW</td>
+                        <td>M3</td>
+                        <td>Fast, good handling</td>
+                        <td>Expensive to maintain</td>
+                    </tr>
+                    <tr>
+                        <td>Subaru</td>
+                        <td>WRX</td>
+                        <td>Fast, good handling</td>
+                        <td>Not very fuel efficient</td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes</td>
+                        <td>AMG GT</td>
+                        <td>Fast, good handling</td>
+                        <td>Expensive</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>This is a picture of one of the cool cars, the Porsche 911:</p>
+            <figure>
+                <img src="assets/porsche911.png" alt="A picture of a gray Porsche 911" width="300">
+                <figcaption>A Porsche 911 Turbo S</figcaption>
+            </figure>
+        </section>
+        <hr>
+        <section>
+            <header>
+                <h2>Using the "ol" and "code" tags</h2>
+            </header>
+            <p>
+                Being able to use ArrayLists in Java while coding is a very important skill. <br>
+                These are some of the most useful methods:
+            </p>
+            <ol>
+                <li>
+                    <code>add()</code> - Adds an element to the ArrayList
+                </li>
+                <li>
+                    <code>remove()</code> - Removes an element from the ArrayList
+                </li>
+                <li>
+                    <code>get()</code> - Gets an element from the ArrayList
+                </li>
+            </ol>
+            <div>
+                <blockquote cite="https://www.geeksforgeeks.org/why-array-data-structures-is-needed/">
+                    <p>
+                        Arrays provide direct and efficient access to any element in the collection. 
+                        Accessing an element in an array is an O(1) operation, 
+                        meaning that the time required to access an element is constant and does not depend on the size of the array.
+                    </p>
+                </blockquote>
+                <p>-GeeksForGeeks, <cite>Why Array Data Structures is needed?</cite></p>
+            </div>
+
+            <p>Besides just ArrayLists, there are other important Java data structures to learn. <br> Here are more:</p>
+            <dl>
+                <dt>HashSet</dt>
+                <dd>Collection of elements but duplicates aren't allowed.</dd>
+
+                <dt>HashMap</dt>
+                <dd>Store key-value pairs, hashing leads to performance optimization.</dd>
+
+                <dt>LinkedList</dt>
+                <dd>Elements are doubly linked, can be used as a stack or queue.</dd>
+            </dl>
+            <p>
+                VSCode is an invaluable tool to use for Java Programming Development. In VSCode, to make a new file (on Windows), press <kbd>Ctrl</kbd>+<kbd>N</kbd>.
+                If you are a Mac user, press <kbd>Cmd</kbd>+<kbd>N</kbd>.
+            </p>
+
+        </section>
+        <hr>
+        <section>
+            <header>
+                <h2>Using the "del" and "ins" tags </h2>
+            </header>
+            
+            <details>
+                <summary>What makes the Toyota Corolla Popular (drop to see answer)</summary>
+                <p>
+                    The Toyota Corolla is popular because of its <del>small size</del> <ins>engine reliability</ins>.
+                </p>
+            </details>
+        </section>
+        <hr>
+        <section>
+            <header>
+                <h2>Using the "search" tag</h2>
+            </header>
+            <search>
+                <form action="NotValidYet">
+                  <label for="car">Find a Car</label>
+                  <input type="search" id="car" name="c">
+                  <button type="submit">Search</button>
+                </form>
+            </search>
+        </section>
+        <hr>
+        <section>
+            <header>
+                <h2>Using the "datalist" and "select" tags (with "optgroup")</h2>
+            </header>
+            <p>
+                The <dfn>datalist</dfn> tag is used to provide an autocomplete feature for input fields.
+                Users can choose from a list of options or type their own option in.
+            </p>
+            <label for="car-choice">Choose a Car:</label>
+            <input list="car-flavors" id="car-choice" name="car-choice">
+            <datalist id="car-flavors">
+                <option value="Porsche 911"></option>
+                <option value="Ford Mustang"></option>
+                <option value="Toyota Corolla"></option>
+                <option value="Subaru WRX"></option>
+                <option value="Toyota 4Runner"></option>
+            </datalist>
+
+            <p>
+                The <dfn>select</dfn> tag is used to create a dropdown list.
+                Users are limited to these options.
+            </p>
+            <label for="car-select">Choose a car:</label>
+
+            <select name="cars" id="car-select">
+                <option value="">--Please choose an option--</option>
+                <optgroup label="Sporty Cars">
+                    <option value="Porsche 911">Porsche 911</option>
+                    <option value="Ford Mustang">Ford Mustang</option>
+                    <option value="Subaru WRX">Subaru WRX</option>
+                    <option value="Chevrolet Corvette">Chevrolet Corvette</option>
+                </optgroup>
+                <optgroup label="Daily Drivers">
+                    <option value="Toyota Corolla">Toyota Corolla</option>
+                    <option value="Toyota 4Runner">Toyota 4Runner</option>
+                    <option value="Honda Civic">Honda Civic</option>
+                </optgroup>
+                
+                
+            </select>
+
+
+        </section>
+        <hr>
+        <section>
+            <header>
+                <h2>Using the "canvas" tag with  minor amounts of JS</h2>
+            </header>
+            <canvas width="120" height="120">
+                A simple canvas element
+            </canvas>
+            <script>
+                const canvas = document.querySelector("canvas");
+                const ctx = canvas.getContext("2d");
+                ctx.fillStyle = "red";
+                ctx.fillRect(50, 50, 100, 100);
+              </script>
+        </section>
+        <hr>
+        <section>
+            <header>
+                <h2>Using the "svg" tag inline</h2>
+                <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="30" stroke="black" stroke-width="7" fill="red" />
+                  </svg>
+            </header>
+        </section>
+        <hr>
+        <section>
+            <header>
+                <h2>Using a custom semantic tag</h2>
+            </header>
+            <p>This is a custom callout-box that highlights important quotes</p>
+            <callout-box>
+                <h3>Important Note</h3>
+                <p>"With great power comes great responsibility" -Spiderman's Uncle</p>
+            </callout-box>
+        </section>
+        <hr>
+        <section>
+            <header>
+                <h2>Using MathML to write Einstein's famous formula</h2>
+            </header>
+            <math>
+                <mrow>
+                    <mi>E</mi>
+                    <mo>=</mo>
+                    <mi>m</mi>
+                    <msup>
+                        <mi>c</mi>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+            </math>        
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; Pranav Kambhampati</p>
+    </footer>
+</body>
+</html>

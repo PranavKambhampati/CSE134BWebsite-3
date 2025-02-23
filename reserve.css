@@ -1,0 +1,49 @@
+/* Contents below are for the education section of the main page */
+
+#education {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Left: text (2fr), Right: image (1fr) */
+    grid-template-rows: auto auto;
+    gap: 1.5em; /* Adds spacing between elements */
+    align-items: start;
+    padding: 2em;
+}
+
+#education header {
+    grid-column: 1 / 2;
+    text-align: left;
+    /* font-size: 2em; Makes the title larger */
+}
+
+#education .edu-info {
+    grid-column: 1 / 2;
+    /* font-size: 1.2em; */
+}
+
+#education .courses-container {
+    display: flex;
+    gap: 2em;
+}
+
+.course-box {
+    padding: 0.5em;
+    border: 0.15em solid #ccc;
+    border-radius: 0.5em;
+    background: #f9f9f9;
+    /* font-size: 1.2em; */
+}
+
+/* Image Styling */
+#education picture {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+}
+
+#education picture img {
+    max-width: 100%;
+    width: 300%;
+    height: auto;
+    border-radius: 0.5em; /* Slight rounding for aesthetics */
+}
