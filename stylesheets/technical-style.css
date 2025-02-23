@@ -1,0 +1,135 @@
+:root {
+    --primary-background-color: #3d3b49;
+    --general-text-color: #dbdad5;
+    --text-font-family: "Poppins", sans-serif;
+    --general-text-font-size: 1.3em;
+    --non-general-text-font-size: 1em;
+    --main-heading-font-size: 2.5em;
+    --secondary-heading-font-size: 2.2em;
+    --third-heading-font-size: 1.6em;
+    --fourth-heading-font-size: 1.5em;
+    --summary-text-color: #3d3b49;
+    --details-text-color: #3d3b49;
+    --details-background-color: #efedfc;
+}
+
+body {
+    background-color: var(--primary-background-color, White);
+    color: var(--general-text-color, black);
+    font-family: var(--text-font-family, Arial);
+    padding-top: 5em;
+}
+
+h1 {
+    font-size: var(--main-heading-font-size, 2.5em);
+    color: color-mix(in srgb, rgb(157, 132, 226) 90%, black 10%);
+}
+
+h2 {
+    font-size: var(--secondary-heading-font-size, 2.2em);
+}
+
+h3 {
+    font-size: var(--third-heading-font-size, 1.6em);
+}
+
+h4 {
+    font-size: var(--fourth-heading-font-size, 1.5em);
+}
+
+hr {
+    border: 0.05em solid #757192;
+}
+
+hgroup {
+    margin: 2em;
+}
+
+#skills {
+    margin: 2em;
+    font-size: --var(general-text-font-size, 1.3em);
+}
+
+#skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1em;
+}
+
+#skills-container > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-box {
+    flex: 1 1;
+    border: 0.2em solid rgb(255, 255, 255);
+    padding: 1em;
+}
+
+#experiences {
+    margin: 2em;
+    font-size: --var(general-text-font-size, 1.3em);
+}
+
+#experiences-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1em;
+}
+
+#experiences-container > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.experiences-box {
+    flex: 1 1;
+    border: 0.2em solid rgb(255, 255, 255);
+    padding: 1em;
+}
+
+#projects {
+    margin: 2em;
+    font-size: --var(general-text-font-size, 1.3em);
+}
+
+#projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1em;
+}
+
+#projects-container > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-box {
+    flex: 1 1;
+    border: 0.2em solid rgb(255, 255, 255);
+    padding: 1em;
+}
+
+@media (max-width: 500px) {
+    #skills-container {
+        flex-direction: column;
+    }
+
+    #experiences-container {
+        flex-direction: column;
+    }
+
+    #projects-container {
+        flex-direction: column;
+    }
+}
