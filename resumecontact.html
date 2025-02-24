@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="stylesheets/resumecontact-style.css">
     <link rel="stylesheet" href="stylesheets/navbar-style.css">
     <link rel="stylesheet" href="stylesheets/footer-style.css">
+    <link rel="stylesheet" href="stylesheets/validate-form.css">
 </head>
 <body>
     <header>
@@ -61,7 +62,7 @@
                 <form action="https://httpbin.org/post" method="POST">
                     <div>
                         <label for="name">Name (required):
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" required minlength="2" maxlength="50" pattern="[A-Za-z\s]+">
                         </label>
                         </label>
                         <output class="error" id="nameError"></output>
@@ -69,14 +70,14 @@
                     </div>
                     <div>
                         <label for="email">Email (required):
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                         </label>
                         <output class="error" id="emailError"></output>
                         <output class="info" id="emailInfo"></output>
                     </div>
                     <div>
                         <label for="organization">Organization:
-                            <input type="text" id="organization" name="organization">
+                            <input type="text" id="organization" name="organization" maxlength="100" pattern="[A-Za-z0-9\s.,'!?-]+">
                         </label>
                         <output class="error" id="orgError"></output>
                         <output class="info" id="orgInfo"></output>
@@ -93,7 +94,7 @@
                     </fieldset>
                     <div>
                         <label for="message">Leave a message (required):
-                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <textarea id="message" name="message" rows="4" required minlength="10" maxlength="500" pattern="[a-zA-Z0-9._%+-]+"></textarea>
                         </label>
                         <output class="error" id="messageError"></output>
                         <output class="info" id="messageInfo"></output>
