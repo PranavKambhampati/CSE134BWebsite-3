@@ -1,0 +1,36 @@
+/* Style for required fields when they are empty */
+input:user-invalid,
+textarea:user-invalid {
+    border: 2px solid red;
+}
+
+/* Style for valid fields */
+input:user-valid,
+textarea:user-valid {
+    border: 2px solid green;
+}
+
+fieldset:has(input:checked) {
+    border: 2px solid green;
+}
+
+/* Show error messages dynamically */
+input:invalid + .error::after,
+textarea:invalid + .error::after {
+    content: " This field is required or incorrectly formatted.";
+    color: red;
+    font-size: 0.9em;
+}
+
+/* Placeholder color to indicate missing information */
+input:user-invalid::placeholder,
+textarea:user-invalid::placeholder {
+    color: red;
+    opacity: 0.7;
+}
+
+/* Disable submit button if the form is invalid */
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
