@@ -58,31 +58,47 @@
                 <header>
                     <h2>Contact Me!</h2>
                 </header>
-                <form action="notValidYet" method="POST">
+                <form action="https://httpbin.org/post" method="POST">
                     <div>
-                        <label>Name:</label>
-                        <input type="text" required>
+                        <label for="name">Name (required):
+                            <input type="text" id="name" name="name" required>
+                        </label>
+                        </label>
+                        <output class="error" id="nameError"></output>
+                        <output class="info" id="nameInfo"></output>
                     </div>
                     <div>
-                        <label>Email:</label>
-                        <input type="email" required>
+                        <label for="email">Email (required):
+                            <input type="email" id="email" name="email" required>
+                        </label>
+                        <output class="error" id="emailError"></output>
+                        <output class="info" id="emailInfo"></output>
                     </div>
                     <div>
-                        <label>Organization:</label>
-                        <input type="text">
+                        <label for="organization">Organization:
+                            <input type="text" id="organization" name="organization">
+                        </label>
+                        <output class="error" id="orgError"></output>
+                        <output class="info" id="orgInfo"></output>
                     </div>
                     <fieldset>
-                        <legend>Career Type</legend>
+                        <legend><strong>Career Type</strong></legend>
                         <div class="radio-group">
                             <label><input type="radio" name="career" id="student"> Student</label>
                             <label><input type="radio" name="career" id="professional"> Industry Professional</label>
                             <label><input type="radio" name="career" id="recruiter"> Recruiter</label>
                         </div>
+                        <output class="error" id="careerError"></output>
+                        <output class="info" id="careerInfo"></output>
                     </fieldset>
                     <div>
-                        <label>Leave a message:</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <label for="message">Leave a message (required):
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </label>
+                        <output class="error" id="messageError"></output>
+                        <output class="info" id="messageInfo"></output>
                     </div>
+                    <input type="hidden" name="possible_bot" value="true">
                     <div>
                         <button type="submit">Submit</button>
                     </div>
