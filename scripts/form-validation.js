@@ -49,17 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
             errorElement.classList.remove("show");
         }
 
-        // Remove the flash and error after a short time
-        // if (!isValid) {
-        //     setTimeout(() => {
-        //         errorElement.classList.remove("show");
-        //     }, 2000);
-
-        //     setTimeout(() => {
-        //         field.classList.remove("flash");
-        //     }, 500); // Flash duration
-        // }
-
         return isValid;
     }
 
