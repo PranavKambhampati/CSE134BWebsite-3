@@ -34,3 +34,28 @@ button:disabled {
     background-color: gray;
     cursor: not-allowed;
 }
+
+/****************************************************/
+/* CSS code Part 3 (JS Form Validation) */
+/* Flashing the input field */
+input.flash, textarea.flash {
+    animation: flash 0.5s ease;
+    border-color: red;
+}
+
+@keyframes flash {
+    0% { background-color: #ffcccc; }
+    50% { background-color: #ff9999; }
+    100% { background-color: #ffffff; }
+}
+
+/* Error messages fading in and out */
+output.error.show {
+    color: red;
+    animation: fadeOut 2s ease;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
