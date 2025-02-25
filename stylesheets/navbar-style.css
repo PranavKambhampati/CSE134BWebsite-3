@@ -1,3 +1,19 @@
+:root {
+    --nav-background-color: #333;
+    --nav-dropdown-color: #444;
+    --nav-hover-color: #555;
+    --nav-dropdown-hover-color: #867777;
+    --nav-text-color: white;
+}
+
+/* [data-theme="dark"] {
+    --nav-background-color: #c08414;
+    --nav-dropdown-color: #444;
+    --nav-hover-color: #555;
+    --nav-dropdown-hover-color: #867777;
+    --nav-text-color: white;
+} */
+
 nav:has(ul) {
     position: fixed;
     top: 0;
@@ -5,7 +21,7 @@ nav:has(ul) {
     width: 100%;
     margin-bottom: 5em;
     z-index: 1000;;
-    background-color: #333;
+    background-color: var(--nav-background-color);
     color: white;
     padding: 1em;
     font-family: "Poppins", sans-serif;
@@ -25,13 +41,13 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: var(--nav-text-color);
     font-size: 1.5em;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: var(--nav-hover-color);
     border-radius: 0.25em;
 }
 
@@ -39,7 +55,7 @@ nav ul li a:hover {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #444;
+    background-color: var(--nav-dropdown-color);
     min-width: 5em;
     display: none;
     list-style: none;
@@ -53,13 +69,13 @@ nav ul li a:hover {
 
 .nav-dropdown li a {
     padding: 0.5em;
-    color: white;
+    color: var(--nav-text-color);
     display: block;
     font-size: 1em;
 }
 
 .nav-dropdown li a:hover {
-    background-color: #867777;
+    background-color: var(--nav-dropdown-hover-color);
 }
 
 nav ul li:hover .nav-dropdown {
@@ -105,22 +121,3 @@ nav ul li:hover .nav-dropdown {
     }
 
 }
-
-/* <header>
-        <nav>
-            <ul>
-                <!-- <li id="faviconplace">Pranav Kambhampati</li> -->
-                <li>
-                    <a href="index.html">About Me</a>
-                    <ul class="nav-dropdown">
-                        <li><a href="#hi">Hi</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#FAQ">FAQ</a></li>
-                    </ul>
-                </li>
-                <li><a href="technical.html">Skills + Experiences + Projects</a></li>
-                <li><a href="resumecontact.html">Contact Me + Resume</a></li>
-                <li><a href="experiments.html">Experimentation</a></li>
-            </ul>
-        </nav>
-    </header> */

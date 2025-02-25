@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="stylesheets/footer-style.css">
     <link rel="stylesheet" href="stylesheets/validate-form.css">
     <link rel="stylesheet" href="stylesheets/form-message-info.css">
+    <link rel="stylesheet" href="stylesheets/toggler.css">
 </head>
 <body>
     <header>
@@ -41,6 +42,12 @@
                         <li><a href="resumecontact.html#contact">Contact Me</a></li>
                     </ul>
                 </li>
+                <li id="toggle-list-item" style="justify-content: flex-start;">
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                 </li>
                 <!-- <li><a href="experiments.html">Experimentation</a></li> -->
             </ul>
         </nav>
@@ -111,6 +118,8 @@
 
     <script src="scripts/form-validation.js"></script>
     <script src="scripts/textarea-countdown.js"></script>
+    <script src="scripts/themetoggle.js"></script>
+
     
     <footer>
         <p>&copy; Pranav Kambhampati</p>

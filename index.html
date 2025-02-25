@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="stylesheets/index-style.css">
     <link rel="stylesheet" href="stylesheets/navbar-style.css">
     <link rel="stylesheet" href="stylesheets/footer-style.css">
+    <link rel="stylesheet" href="stylesheets/toggler.css">
     
 
     <style>
@@ -33,8 +34,10 @@
     <header>
         <nav>
             <button id="hamburger-btn" aria-label="Toggle navigation">&#9776;</button>
+            
             <ul>
                 <!-- <li id="faviconplace">Pranav Kambhampati</li> -->
+                 
                 <li>
                     <a href="index.html">About Me</a>
                     <ul class="nav-dropdown">
@@ -58,6 +61,12 @@
                         <li><a href="resumecontact.html#contact">Contact Me</a></li>
                     </ul>
                 </li>
+                <li id="toggle-list-item" style="justify-content: flex-start;">
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                 </li>
                 <!-- <li><a href="experiments.html">Experimentation</a></li> -->
             </ul>
         </nav>
@@ -209,7 +218,7 @@
             </template>
         </div>
     </main>
-    
+    <script src="scripts/themetoggle.js"></script>
     <footer>
         <p>&copy; Pranav Kambhampati</p>
 

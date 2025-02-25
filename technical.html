@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="stylesheets/technical-style.css">
     <link rel="stylesheet" href="stylesheets/navbar-style.css">
     <link rel="stylesheet" href="stylesheets/footer-style.css">
+    <link rel="stylesheet" href="stylesheets/toggler.css">
 </head>
 <body>
     
@@ -42,6 +43,12 @@
                         <li><a href="resumecontact.html#contact">Contact Me</a></li>
                     </ul>
                 </li>
+                <li id="toggle-list-item" style="justify-content: flex-start;">
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                 </li>
                 <!-- <li><a href="experiments.html">Experimentation</a></li> -->
             </ul>
         </nav>
@@ -216,6 +223,8 @@
             </header>
         </section>
     </main>
+    <script src="scripts/themetoggle.js"></script>
+
     <footer>
         <p>&copy; Pranav Kambhampati</p>
 

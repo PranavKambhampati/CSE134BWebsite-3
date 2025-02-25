@@ -8,9 +8,15 @@
     --secondary-heading-font-size: 2.2em;
     --third-heading-font-size: 1.6em;
     --fourth-heading-font-size: 1.5em;
-    --summary-text-color: #3d3b49;
-    --details-text-color: #3d3b49;
-    --details-background-color: #efedfc;
+    --accent-color: color-mix(in srgb, rgb(157, 132, 226) 90%, black 10%);
+    --box-colors: rgb(255, 255, 255);
+}
+
+[data-theme="dark"] {
+    --primary-background-color: antiquewhite;
+    --general-text-color: #3d3b49;
+    --accent-color: color-mix(in srgb, rgb(77, 29, 207) 90%, black 10%);
+    --box-colors: color-mix(in srgb, rgb(77, 29, 207) 90%, black 10%);
 }
 
 body {
@@ -22,7 +28,7 @@ body {
 
 h1 {
     font-size: var(--main-heading-font-size, 2.5em);
-    color: color-mix(in srgb, rgb(157, 132, 226) 90%, black 10%);
+    color: var(--accent-color, #3d3b49);
 }
 
 h2 {
@@ -66,7 +72,7 @@ hgroup {
 
 .skills-box {
     flex: 1 1;
-    border: 0.2em solid rgb(255, 255, 255);
+    border: 0.2em solid var(--box-colors, rgb(255, 255, 255));
     padding: 1em;
 }
 
@@ -91,7 +97,7 @@ hgroup {
 
 .experiences-box {
     flex: 1 1;
-    border: 0.2em solid rgb(255, 255, 255);
+    border: 0.2em solid var(--box-colors, rgb(255, 255, 255));
     padding: 1em;
 }
 
@@ -116,7 +122,7 @@ hgroup {
 
 .projects-box {
     flex: 1 1;
-    border: 0.2em solid rgb(255, 255, 255);
+    border: 0.2em solid var(--box-colors, rgb(255, 255, 255));
     padding: 1em;
 }
 

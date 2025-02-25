@@ -10,6 +10,13 @@
     --summary-text-color: #3d3b49;
     --details-text-color: #3d3b49;
     --details-background-color: #efedfc;
+    --accent-color: color-mix(in srgb, rgb(157, 132, 226) 90%, black 10%);
+}
+
+[data-theme="dark"] {
+    --primary-background-color: antiquewhite;
+    --general-text-color: #3d3b49;
+    --accent-color: color-mix(in srgb, rgb(77, 29, 207) 90%, black 10%);
 }
 
 body {
@@ -28,7 +35,7 @@ h2, #hello-statement {
 }
 
 #hello-statement {
-    color: color-mix(in srgb, rgb(157, 132, 226) 90%, black 10%);
+    color: var(--accent-color, #3d3b49);
 }
 
 h3 {
@@ -98,7 +105,7 @@ h3 {
     margin-left: 7em;
     margin-top: 5em;
     place-content: center;
-    border: 5px solid color-mix(in srgb, rgb(157, 132, 226) 90%, black 10%);
+    border: 5px solid var(--accent-color, #3d3b49);
 }
 
 /** Styling #FAQ **/
@@ -141,7 +148,7 @@ summary {
 }
 
 summary::marker {
-    color: color-mix(in srgb, rgb(157, 132, 226) 90%, black 10%); /* Custom marker color */
+    color: var(--accent-color, black);
 }
 
 details p {
