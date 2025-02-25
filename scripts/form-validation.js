@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contactForm");
-
+    let form_errors = [];
     const fields = {
         name: document.getElementById("name"),
         email: document.getElementById("email"),
@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
             errorElement.textContent = field.validationMessage;
             field.classList.add("flash");
             errorElement.classList.add("show");
+
+            form_errors.push({field:field.name, error_message:field.validationMessage});
         } else {
             errorElement.textContent = "";
             field.classList.remove("flash");
@@ -69,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
             errorElement.textContent = "Invalid email format.";
             field.classList.add("flash");
             errorElement.classList.add("show");
+            form_errors.push({field:field.name, error_message:"invalid email address"});
         } else {
             errorElement.textContent = "";
             field.classList.remove("flash");
@@ -80,6 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function validateCareer() {
         const isSelected = [...fields.career].some(radio => radio.checked);
         errors.career.textContent = isSelected ? "" : "Please select a career type.";
+        if(!isSelected){
+            form_errors.push({field:"career", error_message:"select a career type"});
+        }
         return isSelected;
     }
 
@@ -99,6 +105,13 @@ document.addEventListener("DOMContentLoaded", () => {
         let isValid = form.checkValidity() && validateCareer();
         if (!isValid) {
             event.preventDefault(); // Stop submission if invalid
+
+            //modifying the dom tree to add form_errors to the form but its "hidden" from the user
+            const formErrorsInput = document.createElement("input");
+            formErrorsInput.type = "hidden";
+            formErrorsInput.name = "form-errors";
+            formErrorsInput.value = JSON.stringify(form_errors);
+            form.appendChild(formErrorsInput);
         }
     });
 });
