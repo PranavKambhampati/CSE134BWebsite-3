@@ -59,7 +59,7 @@
                 <header>
                     <h2>Contact Me!</h2>
                 </header>
-                <form action="https://httpbin.org/post" method="POST">
+                <form id="contactForm" action="https://httpbin.org/post" method="POST">
                     <div>
                         <label for="name">Name (required):
                             <input type="text" id="name" name="name" required minlength="2" maxlength="50" pattern="[A-Za-z\s]+">
@@ -107,6 +107,8 @@
             </section>
         </div>
     </main>
+
+    <script src="scripts/form-validation.js"></script>
     
     <footer>
         <p>&copy; Pranav Kambhampati</p>
