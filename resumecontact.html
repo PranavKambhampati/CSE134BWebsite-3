@@ -78,14 +78,15 @@
                     </div>
                     <div>
                         <label for="email">Email (required):
-                            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                         </label>
                         <output class="error" id="emailError"></output>
                         <output class="info" id="emailInfo"></output>
+                        <!-- pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" -->
                     </div>
                     <div>
                         <label for="organization">Organization (required):
-                            <input type="text" id="organization" name="organization" maxlength="100" required pattern="[A-Za-z0-9\s.,'!?-]+">
+                            <input type="text" id="organization" name="organization" maxlength="100" required pattern="[A-Za-z0-9\s.,'!?\-]+">
                         </label>
                         <output class="error" id="orgError"></output>
                         <output class="info" id="orgInfo"></output>
@@ -108,6 +109,7 @@
                         <output class="info" id="messageInfo"></output>
                     </div>
                     <input type="hidden" name="possible_bot" value="true">
+                    <input type="hidden" id="form_errors" name="form_errors">
                     <div>
                         <button type="submit">Submit</button>
                     </div>
