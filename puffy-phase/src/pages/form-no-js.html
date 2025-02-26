@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/resumecontact-style.css">
+    <link rel="stylesheet" href="stylesheets/navbar-style.css">
+    <link rel="stylesheet" href="stylesheets/footer-style.css">
+    <link rel="stylesheet" href="stylesheets/validate-form.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button id="hamburger-btn" aria-label="Toggle navigation">&#9776;</button>
+            <ul>
+                <!-- <li id="faviconplace">Pranav Kambhampati</li> -->
+                <li>
+                    <a href="index.html">About Me</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="index.html#hi">Hi</a></li>
+                        <li><a href="index.html#education">Education</a></li>
+                        <li><a href="index.html#FAQ">FAQ</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="technical.html">Skills + Experiences + Projects</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="technical.html#skills">Skills</a></li>
+                        <li><a href="technical.html#experiences">Experiences</a></li>
+                        <li><a href="technical.html#projects">Projects</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="resumecontact.html">Contact Me + Resume</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="resumecontact.html#resume">Resume</a></li>
+                        <li><a href="resumecontact.html#contact">Contact Me</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="experiments.html">Experimentation</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        <hgroup>
+            <h1>Resume + Contact Me!</h1>
+            <p>My resume and a way to get in touch with me.</p>
+        </hgroup>
+        <div id="resumecontact-wrapper">
+            <div id="resume">
+                <iframe src="assets/PranavKambhampatiResume-ComputerEngineering.pdf" width="900" height="750"></iframe>
+            </div>
+        
+            <section id="contact">
+                <header>
+                    <h2>Contact Me!</h2>
+                </header>
+                <form action="https://httpbin.org/post" method="POST">
+                    <div>
+                        <label for="name">Name (required):
+                            <input type="text" id="name" name="name" required minlength="2" maxlength="50" pattern="[A-Za-z\s]+">
+                        </label>
+                        </label>
+                        <output class="error" id="nameError"></output>
+                        <output class="info" id="nameInfo"></output>
+                    </div>
+                    <div>
+                        <label for="email">Email (required):
+                            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                        </label>
+                        <output class="error" id="emailError"></output>
+                        <output class="info" id="emailInfo"></output>
+                    </div>
+                    <div>
+                        <label for="organization">Organization:
+                            <input type="text" id="organization" name="organization" maxlength="100" pattern="[A-Za-z0-9\s.,'!?-]+">
+                        </label>
+                        <output class="error" id="orgError"></output>
+                        <output class="info" id="orgInfo"></output>
+                    </div>
+                    <fieldset>
+                        <legend><strong>Career Type</strong></legend>
+                        <div class="radio-group">
+                            <label><input type="radio" name="career" id="student"> Student</label>
+                            <label><input type="radio" name="career" id="professional"> Industry Professional</label>
+                            <label><input type="radio" name="career" id="recruiter"> Recruiter</label>
+                        </div>
+                        <output class="error" id="careerError"></output>
+                        <output class="info" id="careerInfo"></output>
+                    </fieldset>
+                    <div>
+                        <label for="message">Leave a message (required):
+                            <textarea id="message" name="message" rows="4" required minlength="10" maxlength="500" pattern="[a-zA-Z0-9._%+-]+"></textarea>
+                        </label>
+                        <output class="error" id="messageError"></output>
+                        <output class="info" id="messageInfo"></output>
+                    </div>
+                    <input type="hidden" name="possible_bot" value="true">
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; Pranav Kambhampati</p>
+
+        <address>
+            <p>
+                Contact me at: 
+                <a href="mailto:pkambhampati@ucsd.edu">pkambhampati@ucsd.edu</a>
+            </p>
+            
+        </address>
+    </footer>
+</body>
+</html>

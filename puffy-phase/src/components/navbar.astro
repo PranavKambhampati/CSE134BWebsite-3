@@ -1,0 +1,44 @@
+<head>
+  <link rel="stylesheet" href="/styles/navbar-style.css" />
+  <link rel="stylesheet" href="/styles/toggler.css" />
+  <script src="/scripts/themetoggle.js" defer></script>
+</head>
+
+<nav>
+    <button id="hamburger-btn" aria-label="Toggle navigation">&#9776;</button>
+    
+    <ul>
+        <!-- <li id="faviconplace">Pranav Kambhampati</li> -->
+            
+        <li>
+            <a href="index">About Me</a>
+            <ul class="nav-dropdown">
+                <li><a href="index#hi">Hi</a></li>
+                <li><a href="index#education">Education</a></li>
+                <li><a href="index#FAQ">FAQ</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="technical">Skills + Experiences + Projects</a>
+            <ul class="nav-dropdown">
+                <li><a href="technical#skills">Skills</a></li>
+                <li><a href="technical#experiences">Experiences</a></li>
+                <li><a href="technical#projects">Projects</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="resumecontact">Contact Me + Resume</a>
+            <ul class="nav-dropdown">
+                <li><a href="resumecontact#resume">Resume</a></li>
+                <li><a href="resumecontact#contact">Contact Me</a></li>
+            </ul>
+        </li>
+        <li id="toggle-list-item" style="justify-content: flex-start;">
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+            </li>
+        <!-- <li><a href="experiments.html">Experimentation</a></li> -->
+    </ul>
+</nav>

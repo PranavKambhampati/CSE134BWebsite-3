@@ -1,0 +1,19 @@
+/* Info message styling for character countdown */
+#messageInfo {
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Normal, warning, and error styles for character countdown */
+#messageInfo {
+    color: green; /* Default color */
+}
+
+#messageInfo.warning {
+    color: orange;
+}
+
+#messageInfo.error {
+    color: red;
+}

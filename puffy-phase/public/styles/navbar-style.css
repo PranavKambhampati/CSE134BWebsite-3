@@ -1,0 +1,123 @@
+:root {
+    --nav-background-color: #333;
+    --nav-dropdown-color: #444;
+    --nav-hover-color: #555;
+    --nav-dropdown-hover-color: #867777;
+    --nav-text-color: white;
+}
+
+/* [data-theme="dark"] {
+    --nav-background-color: #c08414;
+    --nav-dropdown-color: #444;
+    --nav-hover-color: #555;
+    --nav-dropdown-hover-color: #867777;
+    --nav-text-color: white;
+} */
+
+nav:has(ul) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 5em;
+    z-index: 1000;;
+    background-color: var(--nav-background-color);
+    color: white;
+    padding: 1em;
+    font-family: "Poppins", sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3em;
+}
+
+nav ul li {
+    margin: 0 1em;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--nav-text-color);
+    font-size: 1.5em;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--nav-hover-color);
+    border-radius: 0.25em;
+}
+
+.nav-dropdown:has(li) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--nav-dropdown-color);
+    min-width: 5em;
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-dropdown li {
+    width: 100%;
+}
+
+.nav-dropdown li a {
+    padding: 0.5em;
+    color: var(--nav-text-color);
+    display: block;
+    font-size: 1em;
+}
+
+.nav-dropdown li a:hover {
+    background-color: var(--nav-dropdown-hover-color);
+}
+
+nav ul li:hover .nav-dropdown {
+    display: block;
+}
+
+#faviconplace {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    justify-content: flex-start;
+}
+
+#hamburger-btn {
+    display: none;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px){
+    nav {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 500px){
+    #hamburger-btn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding-right: 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav {
+        transform: scale(0.5);
+    }
+
+}

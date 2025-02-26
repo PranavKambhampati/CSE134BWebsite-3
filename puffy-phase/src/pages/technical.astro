@@ -1,0 +1,211 @@
+---
+import Navbar from "../components/navbar.astro";
+import Footer from "../components/footer.astro";
+
+import '../styles/technical-style.css';
+import '../styles/toggler.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/technical-style.css">
+    <link rel="stylesheet" href="styles/navbar-style.css">
+    <link rel="stylesheet" href="styles/footer-style.css">
+    <link rel="stylesheet" href="styles/toggler.css">
+</head>
+<body>
+    
+    <!-- include nav bar -->
+
+    <header>
+        <Navbar />
+    </header>
+    <main>
+        <hgroup>
+            <h1>Skills, Experience and Projects</h1>
+            <p>A list of my Electrical Engineering and Computer Science skills, experiences and projects.</p>
+        </hgroup>
+        
+        <hr>
+        <section id="skills">
+            <header>
+                <h2>Skills</h2>
+                <div id="skills-container">
+                    <div>
+                        <h3>Electrical Engineering Skills</h3>
+                        <div class="skills-box">
+                            <h4>Languages</h4>
+                            <ul>
+                                <li>Bash</li>
+                                <li>System Verilog</li>
+                            </ul>
+
+                            <h4>Dev/Simulation Tools</h4>
+                            <ul>
+                                <li>Altera Quartus (Synthesis)</li>
+                                <li>ModelSim (Simulation)</li>
+                                <li>LTSpice (Circuit Design)</li>
+                                <li>SolidWorks</li>
+                                <li>Arduino</li>
+                                <li>Altium Designer</li>
+                            </ul>
+
+                            <h4>Lab Tools</h4>
+                            <ul>
+                                <li>Solder Irons</li>
+                                <li>Oscilloscopes</li>
+                                <li>AC/DC Power Supplies</li>
+                                <li>Breadboards</li>
+                                <li>Multimeters</li>
+                            </ul>
+
+                            <h4>Concepts</h4>
+                            <ul>
+                                <li>Agile</li>
+                                <li>Component and Design Techniques for Digital Systems</li>
+                                <li>Circuit Design</li>
+                                <li>Linear Time Invariant System Analysis</li>
+                                <li>Linear/Nonlinear Circuit Elements</li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Computer Science Skills</h3>
+                        <div class="skills-box">
+                            <h4>
+                                Languages
+                            </h4>
+                            <ul>
+                                <li>Java</li>
+                                <li>Python</li>
+                                <li>C++</li>
+                                <li>HTML/CSS/JS</li>
+                                <li>SQL</li>
+                            </ul>
+
+                            <h4>Dev/Simulation Tools</h4>
+                            <ul>
+                                <li>Git (GitHub, Actions, Project)</li>
+                                <li>Android Studio</li>
+                                <li>Valgrind</li>
+                                <li>AWS DynamoDB</li>
+                            </ul>
+
+                            <h4>Technologies</h4>
+                            <ul>
+                                <li>Testing: JUnit, PyTest</li>
+                                <li>Android</li>
+                                <li>SpringBoot, Thymeleaf</li>
+                                <li>Pandas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <hr>
+
+        <section id="experiences">
+            <header>
+                <h2>Experiences</h2>
+                <div id="experiences-container">
+                    <div>
+                        <h3>Electrical Engineering Experiences</h3>
+                        <div class="experiences-box">
+                            <h4>Rocketry Avionics Hardware Engineer at Rocket Propulsion Laboratory (October 2023 - Present)</h4>
+                            <ul>
+                                <li>Worked to design and implement avionics hardware systems for rocketry applications, enhancing system performance.</li>
+                                <li>Utilized Arduino platforms to develop embedded control systems, integrating sensors and actuators for live data processing.</li>
+                                <li>Documented hardware design processes, test procedures and results while collaborating with cross-functional teams to integrate avionics systems with propulsion components, contributing to successful experimental launches and testing phases.</li>
+                                <li>Built Class G Rocket - see projects section</li>
+                            </ul>
+
+                            <h4>Test Engineering Intern at NXP Semiconductors (June 2024 - September 2024)</h4>
+                            <ul>
+                                <li>Do Stuff</li>
+                                <li>Do more stuff</li>
+                                <li>Do even more stuff</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Computer Science Experiences</h3>
+                        <div class="experiences-box">
+                            <h4>Computer Science and Engineering Tutor at UC San Diego (December 2023 - Present)</h4>
+                            <ul>
+                                <li>Provide individualized tutoring sessions for classes of 400+ students on Data Structure fundamentals, Java Object Oriented Programming Design, Sorting Algorithms, Unit Testing and software development principles.</li>
+                                <li>Collaborated with faculty to align tutoring strategies with course objectives, building an optimal learning environment.</li>
+                                <li>Proctored and graded student assessments, helped setup assignments, and adjust course curriculum to target tough concepts.</li>
+                            </ul>
+
+                            <h4>Business Operations Software Engineering Intern at ASML (June 2024 - September 2024)</h4>
+                            <ul>
+                                <li>Collaborated in a team of 7 to build and deploy an Extract-Transform-Load based system to migrate data between sources</li>
+                                <li>Performed comparative analysis of customer revenue vs historical stock price to build ASML revenue forecasting ML model.</li>
+                                <li>Contributed to database table design and development, supporting dataset analysis and writing algorithms to identify trends.</li>
+                                <li>Built Python-Extract-Transform-Load (PETL) - see projects section</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <hr>
+        <section id="projects">
+            <header>
+                <h2>Projects</h2>
+                <div id="projects-container">
+                    <div>
+                        <h3>Electrical Engineering Projects</h3>
+                        <div class="projects-box">
+                            <h4>Custom Designed Microprocessor</h4>
+                            <ul>
+                                <li>Designed a custom 9-bit assembly language and wrote code for a microprocessor capable of complex operations such as Shift and Carry Multiplication, Hamming distance calculations and smallest/greatest differences between sets of 16 bit numbers.</li>
+                                <li>Developed virtual microprocessor hardware architecture using System Verilog for the assembly language including a centralized memory, register file, arithmetic logic unit, muxes, demuxes, and other computer architecture components.</li>
+                                <li>Simulated and synthesized a fully functional microprocess with a complete Datapath using ModelSim and Altera Quartus.</li>
+                            </ul>
+
+                            <h4>More to be added</h4>
+                            
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Computer Science Projects</h3>
+                        <div class="projects-box">
+                            <h4>Python-Extract-Transform-Load (PETL)</h4>
+                            <ul>
+                                <li>Developed architecture and implemented a dynamic Python-based ETL tool with logging, automated email notifications and database storage to replace costly SSIS packages used to transfer data, saving ASML about $25K per data set migration.</li>
+                                <li>Utilized YAML configuration files for flexible data extraction, transformation and loading from sources such as CSV files, SQL databases and online APIs to destinations like SQL tables and Excel spreadsheets.</li>
+                                <li>Deployed PETL to load 5+ forecast datasets (~$125K) into SQL databases on both development and production servers.</li>
+                            </ul>
+
+                            <h4>More to be added</h4>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </section>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburgerBtn = document.getElementById("hamburger-btn");
+            const navMenu = document.querySelector("nav ul");
+        
+            hamburgerBtn.addEventListener("click", function () {
+                navMenu.classList.toggle("show");
+            });
+        });        
+    </script>
+    <Footer />
+</body>
+</html>
