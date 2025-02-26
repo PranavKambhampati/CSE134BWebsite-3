@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             field.classList.add("flash");
             errorElement.classList.add("show");
             form_errors.push({field:field.name, error_message:"invalid email address"});
+            console.log(form_errors);
         } else {
             errorElement.textContent = "";
             field.classList.remove("flash");
@@ -95,18 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
         let isValid = form.checkValidity() && validateCareer();
         if (!isValid) {
             event.preventDefault(); // Stop submission if invalid
-
-            // //modifying the dom tree to add form_errors to the form but its "hidden" from the user
-            // const formErrorsInput = document.createElement("input");
-            // formErrorsInput.type = "hidden";
-            // formErrorsInput.name = "form-errors";
-            // formErrorsInput.value = JSON.stringify(form_errors);
-            // form.appendChild(formErrorsInput);
         }
         else {
-            document.getElementById("contactForm").addEventListener("submit", function() {
-                document.getElementById("form_errors").value = JSON.stringify(form_errors);
-            });
+            document.getElementById("form_errors").value = JSON.stringify(form_errors);
         }
     });
 });

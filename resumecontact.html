@@ -121,7 +121,16 @@
     <script src="scripts/form-validation.js"></script>
     <script src="scripts/textarea-countdown.js"></script>
     <script src="scripts/themetoggle.js"></script>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburgerBtn = document.getElementById("hamburger-btn");
+            const navMenu = document.querySelector("nav ul");
+        
+            hamburgerBtn.addEventListener("click", function () {
+                navMenu.classList.toggle("show");
+            });
+        });        
+    </script>
     
     <footer>
         <p>&copy; Pranav Kambhampati</p>
