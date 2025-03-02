@@ -18,29 +18,20 @@
 
     <style>
 
-        body {
-            display: none;
-        }
-        
-        .js-enabled body {
-            display: block;
-        }
 
         picture, img {
             max-width: 100%;
             height: auto;
         }
     </style>
-    <script>
-        document.documentElement.classList.add("js-enabled");
-    </script>
 </head>
-<noscript>
-    <p>Please enable JavaScript to view this website!</p>
-    <a href="https://www.google.com/">External Link (only seen when JS disabled)</a>
-</noscript>
-<body>
 
+<body id="main">
+    <noscript>
+        <p style="color: black;"><strong>Please enable JavaScript to view this website properly!</strong></p>
+        <p>Some things won't work without JavaScript (like the theme switcher)!</p>
+        <a href="https://www.google.com/" style="color: white;">External Link (only seen when JS disabled)</a>
+    </noscript>
     <header>
         <nav>
             <button id="hamburger-btn" aria-label="Toggle navigation">&#9776;</button>
