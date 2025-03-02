@@ -17,19 +17,29 @@
     
 
     <style>
+
+        body {
+            display: none;
+        }
+        
+        .js-enabled body {
+            display: block;
+        }
+
         picture, img {
             max-width: 100%;
             height: auto;
         }
     </style>
     <script>
-
+        document.documentElement.classList.add("js-enabled");
     </script>
 </head>
+<noscript>
+    <p>Please enable JavaScript to view this website!</p>
+    <a href="https://www.google.com/">External Link (only seen when JS disabled)</a>
+</noscript>
 <body>
-    <noscript>
-        <a href="https://www.google.com/">External Link (only seen when JS disabled)</a>
-    </noscript>
 
     <header>
         <nav>
